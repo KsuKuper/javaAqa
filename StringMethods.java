@@ -31,8 +31,8 @@ public class StringMethods {
         System.out.println("String after removing `Java`: " + modifiedString);
     }
 
-    public void methodCake() {
+    public static void methodCake() {
         String cake = "biscuit %s biscuit";
-        System.out.printf((cake) + "%n", "cream");
+        System.out.println(String.format(cake, "cream"));
     }
 }
