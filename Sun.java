@@ -1,3 +1,5 @@
+//HW4
+
 public class Sun {
 
     public static int numberOfSunrise = 0;
