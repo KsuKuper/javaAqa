@@ -18,9 +18,13 @@ public class Hw8List {
             System.out.println(element);
         }
 
-        myList.remove(4);
+        removeDuplicates(myList);
 
-        System.out.println("Size of arrayList: " + myList.size());
+        System.out.println("Size of arrayList after removing: " + myList.size());
+
+        for (String element : myList) {
+            System.out.println(element);
+        }
 
         boolean isAdded = myList.add("10");
 
@@ -45,4 +49,18 @@ public class Hw8List {
             System.out.println(element);
         }
     }
+
+    private static void removeDuplicates(List<String> list) {
+        for (int i = 0; i < list.size(); i++) {
+            String currentElement = list.get(i);
+
+            for (int j = i + 1; j < list.size(); j++) {
+                if (currentElement.equals(list.get(j))) {
+                    list.remove(j);
+                    j--;
+                }
+            }
+        }
+    }
 }
+
