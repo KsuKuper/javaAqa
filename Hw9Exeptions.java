@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 public class Hw9Exeptions {
 
     // Метод, который использует throw
-    public static String readWithThrows() throws IOException{
+    public static String readWithThrows() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String t = reader.readLine();
         reader.close();
@@ -32,6 +32,7 @@ public class Hw9Exeptions {
         }
         return tcf;
     }
+
     // Метод, который использует try-with-resources
     public static String readWithTryWithResources() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
@@ -41,6 +42,7 @@ public class Hw9Exeptions {
             return null; // Возвращаем null в случае ошибки
         }
     }
+
     public static void main(String[] args) {
         // Чтение с использованием throws
         try {
